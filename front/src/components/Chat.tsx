@@ -43,7 +43,7 @@ function Chat() {
 				</div>
 				<div className='justify-self-end h-1/5'>
 					<textarea placeholder='En que te puedo ayudar?' maxLength={200} onChange={handleMessage} className='bg-white rounded-b-2xl resize-none  h-full py-2 px-5  w-full' />
-					{/* <button disabled={!message} onClick={sendMessage}>enviar</button> */}
+					<button disabled={!message} onClick={sendMessage}>enviar</button>
 				</div>
 			</section>
 		</main>
