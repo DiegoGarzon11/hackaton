@@ -30,7 +30,7 @@ export const getMatriculas = (req: Request, res: Response) => {
 	}, {});
 
 	const resultado = Object.keys(conteos).map((nombre) => ({
-		nombre,
+		nombre: nombre.slice(22),
 		conteo: conteos[nombre],
 		masculino: conteoPorInstitucion[nombre].M,
 		femenino: conteoPorInstitucion[nombre].F,
