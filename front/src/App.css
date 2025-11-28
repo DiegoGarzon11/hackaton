@@ -4,3 +4,16 @@
   text-align: center;
   height: 100dvh;
 }
+
+.messages::-webkit-scrollbar {
+  display: none;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+
+}
+
+textarea:focus {
+  outline: none;
+}
