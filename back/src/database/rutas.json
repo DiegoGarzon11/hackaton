@@ -1,0 +1,446 @@
+[
+	{
+		"id": 1,
+		"recorridos": "El Carmen, La Carolina, Escuela San Gabriel, Mercenario, La Violeta - Viceversa.",
+		"beneficiarios": "52",
+		"instituci_n_educativa": "La Violeta - Escuela Pio X"
+	},
+	{
+		"id": 2,
+		"recorridos": "Escuela Gabriel, Mercenario, La Violeta - Viceversa.",
+		"beneficiarios": "49",
+		"instituci_n_educativa": "La Violeta - Escuela Pio X"
+	},
+	{
+		"id": 3,
+		"recorridos": "Meusa, el CAI, Gratamira, Pablo VI, Marco Fidel Suarez - Viceversa.",
+		"beneficiarios": "60",
+		"instituci_n_educativa": "Pablo VI - Marco Fidel Suárez"
+	},
+	{
+		"id": 4,
+		"recorridos": "Esquina Policarpa, cementerio, Chuscal, el Pino, Gratamira, Meusa, La Violeta - Meusa - Viceversa.",
+		"beneficiarios": "82",
+		"instituci_n_educativa": "Escuela Meusa - La Violeta"
+	},
+	{
+		"id": 5,
+		"recorridos": "Alpina, San Agustín, 4 Esquinas, Colpapel, La Diana, Rafael Pombo - Viceversa.",
+		"beneficiarios": "67",
+		"instituci_n_educativa": "Rafael Pombo"
+	},
+	{
+		"id": 6,
+		"recorridos": "La Violeta, Mercenario, San Gabriel, Carolina, La Violeta, Meusa, Sopó, Nocturna.",
+		"beneficiarios": "33",
+		"instituci_n_educativa": "La Violeta"
+	},
+	{
+		"id": 7,
+		"recorridos": "Rafael Pombo, Puente Sopó, los Clubes, Escuela Hatogrande - Viceversa.",
+		"beneficiarios": "70",
+		"instituci_n_educativa": "Rafael Pombo - Hatogrande"
+	},
+	{
+		"id": 8,
+		"recorridos": "Centro Alto, el Carmen, Pablo VI, San Felipe, Jardín Deptal - Viceversa.",
+		"beneficiarios": "38",
+		"instituci_n_educativa": "Pablo VI - Jardín Departamental"
+	},
+	{
+		"id": 9,
+		"recorridos": "Arboloco 80 mts adelante, Pablo VI, Entrada Pablo Javier Lara, Pablo VI Bachillerato, Marco Fidel Suárez, Jardín Deptal - Viceversa.",
+		"beneficiarios": "37",
+		"instituci_n_educativa": "Pablo VI - Marco Fidel Suárez - Jardín Departamental"
+	},
+	{
+		"id": 10,
+		"recorridos": "Bellavista frente a la casa de Gladys Chunza, Carolina Alta, Cruce Miguel Durán, Carolina Alta entrada sector Gómez, escuela Comuneros - Viceversa.",
+		"beneficiarios": "19",
+		"instituci_n_educativa": "Pablo VI - Marco Fidel Suárez"
+	},
+	{
+		"id": 11,
+		"recorridos": "Cruce caseta Pionono km 4.7, Cruce la Y, señor Pachón, Pablo VI - Viceversa.",
+		"beneficiarios": "24",
+		"instituci_n_educativa": "Pablo VI - Marco Fidel Suárez"
+	},
+	{
+		"id": 12,
+		"recorridos": "Cruce caseta Pionono, Cruce Francisco Ospina Bellavista, sector Gómez, colegio Ceis - Viceversa.",
+		"beneficiarios": "45",
+		"instituci_n_educativa": "Complejo Educativo Integral Sopó - CEIS"
+	},
+	{
+		"id": 13,
+		"recorridos": "El Carmen, Carolina, San Gabriel, Mercenario, Violeta, Puente Adobes, Colegio Pablo VI - Viceversa.",
+		"beneficiarios": "37",
+		"instituci_n_educativa": "Pablo VI - Marco Fidel Suárez"
+	},
+	{
+		"id": 14,
+		"recorridos": "El Carmen, Carolina, San Gabriel, Mercenario, La Violeta - Viceversa.",
+		"beneficiarios": "39",
+		"instituci_n_educativa": "La Violeta"
+	},
+	{
+		"id": 15,
+		"recorridos": "El Carmen, Carolina, San Gabriel, Mercenario, La Violeta - Puente Adobes, El Pino, Chuscal, colegio CEIS -Viceversa.",
+		"beneficiarios": "56",
+		"instituci_n_educativa": "Complejo Educativo Integral Sopó - CEIS"
+	},
+	{
+		"id": 16,
+		"recorridos": "Sopó la Almojabana, Variante, Pueblo Viejo, Rafael Pombo - Viceversa.",
+		"beneficiarios": "103",
+		"instituci_n_educativa": "Rafael Pombo"
+	},
+	{
+		"id": 17,
+		"recorridos": "La Diana, Canavita, Colpapel, Cuatro Esquinas, Jardín del Norte, San Agustin, colegio Ceis - Viceversa.",
+		"beneficiarios": "42",
+		"instituci_n_educativa": "Complejo Educativo Integral Sopó - CEIS"
+	},
+	{
+		"id": 18,
+		"recorridos": "Jardín del Norte, Marco Fidel Suárez - Viceversa.",
+		"beneficiarios": "25",
+		"instituci_n_educativa": "Marco Fidel Suárez"
+	},
+	{
+		"id": 19,
+		"recorridos": "Jardín del Norte, Jardín Deptal - Viceversa.",
+		"beneficiarios": "13",
+		"instituci_n_educativa": "Jardín Departamental"
+	},
+	{
+		"id": 20,
+		"recorridos": "Meusa, el CAI, Gratamira, Jardín Deptal - Viceversa.",
+		"beneficiarios": "19",
+		"instituci_n_educativa": "Jardín Departamental"
+	},
+	{
+		"id": 21,
+		"recorridos": "Pueblo Viejo, Variante, colegio Ceis - Viceversa.",
+		"beneficiarios": "51",
+		"instituci_n_educativa": "Complejo Educativo Integral Sopó - CEIS"
+	},
+	{
+		"id": 22,
+		"recorridos": "Casablanca, Meusa, Finca Forero, Meusa, el CAI, Gratamira, El Pino, Chuscal, Variante, Pueblo Viejo, Jardín Deptal, Marco Fidel Suárez - Viceversa. Jornada Tarde.",
+		"beneficiarios": "18",
+		"instituci_n_educativa": "Marco Fidel Suárez - Jardín Departamental"
+	},
+	{
+		"id": 23,
+		"recorridos": "Rafael Pombo, Pueblo Viejo, la cuarta, plazoleta, almojabana, Sopó - medio recorrido",
+		"beneficiarios": "52",
+		"instituci_n_educativa": "Rafael Pombo"
+	},
+	{
+		"id": 24,
+		"recorridos": "Pueblo Viejo, colegio Pablo VI - Viceversa.",
+		"beneficiarios": "32",
+		"instituci_n_educativa": "Pablo VI"
+	},
+	{
+		"id": 25,
+		"recorridos": "Colegio Ceis, Pueblo Viejo.",
+		"beneficiarios": "31",
+		"instituci_n_educativa": "Complejo Educativo Integral Sopó - CEIS"
+	},
+	{
+		"id": 26,
+		"recorridos": "La Diana, Briceño, Pueblo Viejo, Jardín Deptal, U.A.I. - Viceversa.",
+		"beneficiarios": "23",
+		"instituci_n_educativa": "Jardín Departamental - Unidad de Atención Integral U.A.I."
+	},
+	{
+		"id": 27,
+		"recorridos": "Hacienda Flores, Aposentos, Antares, La Trinidad, Jardín Deptal, Marco Fidel Suárez, jornada tarde - Viceversa.",
+		"beneficiarios": "15",
+		"instituci_n_educativa": "Marco Fidel Suárez - Jardín Departamental"
+	},
+	{
+		"id": 28,
+		"recorridos": "Pablo VI, El Pino, Gratamira, Meusa, Violeta, San Gabriel, Carolina, Nocturna.",
+		"beneficiarios": "13",
+		"instituci_n_educativa": "Pablo VI"
+	},
+	{
+		"id": 29,
+		"recorridos": "La Diana, Canavita, Colpapel, cuatro esquinas, Jardín del Norte, San Agustin, Alpina, Pablo VI, Marco Fidel Suárez - Viceversa 1:30 p.m.",
+		"beneficiarios": "44",
+		"instituci_n_educativa": "Pablo VI - Marco Fidel Suárez"
+	},
+	{
+		"id": 30,
+		"recorridos": "Hospital Sopó, Kra 4, Plazoleta, Almojabana, Cementerio, Variante, Pueblo Viejo, Rafael Pombo - Viceversa.",
+		"beneficiarios": "57",
+		"instituci_n_educativa": "Rafael Pombo"
+	},
+	{
+		"id": 31,
+		"recorridos": "Rafael Pombo, Corona, Variante, colegio Ceis - Viceversa.",
+		"beneficiarios": "45",
+		"instituci_n_educativa": "Complejo Educativo Integral Sopó - CEIS"
+	},
+	{
+		"id": 32,
+		"recorridos": "Sector Niño Pueblo Viejo, Jardín del Norte, Jardín Deptal, Marco Fidel Suárez - Viceversa.",
+		"beneficiarios": "44",
+		"instituci_n_educativa": "Marco Fidel Suárez - Jardín Departamental"
+	},
+	{
+		"id": 33,
+		"recorridos": "Hato Chico, Lomitas, Puente Sopó, Rafael Pombo, Briceño, Pueblo Viejo, colegio Pablo VI, Marco Fidel Suárez - Viceversa.",
+		"beneficiarios": "54",
+		"instituci_n_educativa": "Rafael Pombo - Pablo VI - Marco Fidel Suárez"
+	},
+	{
+		"id": 34,
+		"recorridos": "Cuatro esquinas, San Lorenzo, Jardín del Norte, San Agustin, Alpina, colegio Ceis - Viceversa.",
+		"beneficiarios": "43",
+		"instituci_n_educativa": "Complejo Educativo Integral Sopó - CEIS"
+	},
+	{
+		"id": 35,
+		"recorridos": "Pueblo Viejo, Jardín Departamental; Marco Fidel Suárez - Viceversa jornada tarde.",
+		"beneficiarios": "45",
+		"instituci_n_educativa": "Marco Fidel Suárez - Jardín Departamental"
+	},
+	{
+		"id": 36,
+		"recorridos": "Rafael Pombo, Hatogrande, Pueblo Viejo, Sopó, Nocturna - 3 días a la semana.",
+		"beneficiarios": "40",
+		"instituci_n_educativa": "Rafael Pombo"
+	},
+	{
+		"id": 37,
+		"recorridos": "Rafael Pombo, La Diana, Canavita, Colpapel, Sopó, Nocturna - 3 días a la semana.",
+		"beneficiarios": "40",
+		"instituci_n_educativa": "Rafael Pombo"
+	},
+	{
+		"id": 38,
+		"recorridos": "Bellavista, Carolina Alta, Durán, San Agustín, Marco Fidel Suarez (jornada mañana) - Viceversa.",
+		"beneficiarios": "33",
+		"instituci_n_educativa": "Marco Fidel Suárez"
+	},
+	{
+		"id": 39,
+		"recorridos": "Bellavista, Carolina Alta, Durán, San Agustín, Alpina, colegio Ceis - Viceversa.",
+		"beneficiarios": "33",
+		"instituci_n_educativa": "Complejo Educativo Integral Sopó - CEIS"
+	},
+	{
+		"id": 40,
+		"recorridos": "Bellavista, Carolina Alta, Durán, San Agustín, Alpina, Jardín Deptal (jornada mañana) - Viceversa.",
+		"beneficiarios": "20",
+		"instituci_n_educativa": "Jardín Departamental"
+	},
+	{
+		"id": 41,
+		"recorridos": "Bellavista, Carolina Alta, Durán, San Agustín, Alpina, Marco Fidel Suarez (jornada tarde) - Viceversa.",
+		"beneficiarios": "37",
+		"instituci_n_educativa": "Marco Fidel Suárez"
+	},
+	{
+		"id": 42,
+		"recorridos": "Bellavista, Carolina Alta, Durán, San Agustín, Alpina, Jardín Deptal (jornada tarde) - Viceversa.",
+		"beneficiarios": "21",
+		"instituci_n_educativa": "Jardín Departamental"
+	},
+	{
+		"id": 43,
+		"recorridos": "Adicional Ceis. Bellavista, Carolina Alta, Durán, San Agustín, Alpina, colegio Ceis.",
+		"beneficiarios": "19",
+		"instituci_n_educativa": "Complejo Educativo Integral Sopó - CEIS"
+	},
+	{
+		"id": 44,
+		"recorridos": "Pablo VI, Alpina, Jardín del Norte, Cuatro Esquinas, Colpapel, La Diana, Briceño, Nocturna.",
+		"beneficiarios": "17",
+		"instituci_n_educativa": "Pablo VI"
+	},
+	{
+		"id": 45,
+		"recorridos": "Carolina Alta, Bellavista, Marco Fidel Suárez - Viceversa.",
+		"beneficiarios": "25",
+		"instituci_n_educativa": "Marco Fidel Suárez"
+	},
+	{
+		"id": 46,
+		"recorridos": "Jardín del Norte, San Agustin, Carolina Alta, Bellavista, Mirador, U.A.I. - Viceversa.",
+		"beneficiarios": "13",
+		"instituci_n_educativa": "Unidad de Atención Integral - U.A.I."
+	},
+	{
+		"id": 47,
+		"recorridos": "Briceño, Comuneros especiales de inclusión - Viceversa.",
+		"beneficiarios": "10",
+		"instituci_n_educativa": "Marco Fidel Suárez"
+	},
+	{
+		"id": 48,
+		"recorridos": "Escuela Comuneros, Pionono, la Y, la Virgen, jornada tarde - Viceversa.",
+		"beneficiarios": "14",
+		"instituci_n_educativa": "Marco Fidel Suárez"
+	},
+	{
+		"id": 49,
+		"recorridos": "Comuneros, Jardín Deptal, Marco Fidel Suárez.",
+		"beneficiarios": "12",
+		"instituci_n_educativa": "Marco Fidel Suárez - Jardín Departamental"
+	},
+	{
+		"id": 50,
+		"recorridos": "Sopó Terminal, Variante, Chuscal, El Pino, Tres esquinas, Puente Adobes, Toscana, la Violeta - Viceversa.",
+		"beneficiarios": "54",
+		"instituci_n_educativa": "La Violeta"
+	},
+	{
+		"id": 51,
+		"recorridos": "Meusa, CAI, Gratamira, el Pino, colegio Ceis - Viceversa regreso la Violeta, Gabriel.",
+		"beneficiarios": "61",
+		"instituci_n_educativa": "Complejo Educativo Integral Sopó - CEIS"
+	},
+	{
+		"id": 52,
+		"recorridos": "Rafael Pombo, Pueblo Viejo, Marco Fidel Suárez - Viceversa.",
+		"beneficiarios": "44",
+		"instituci_n_educativa": "Rafael Pombo - Marco Fidel Suárez"
+	},
+	{
+		"id": 53,
+		"recorridos": "Rafael Pombo, Puente Sopó, Los Clubes, Lomitas, Hatochico - medio recorrido.",
+		"beneficiarios": "55",
+		"instituci_n_educativa": "Rafael Pombo"
+	},
+	{
+		"id": 54,
+		"recorridos": "Rafael Pombo, Pueblo Viejo, la cuarta, Plazoleta, cementerio medio recorrido.",
+		"beneficiarios": "43",
+		"instituci_n_educativa": "Rafael Pombo"
+	},
+	{
+		"id": 55,
+		"recorridos": "El Pino, Chuscal, Variante, Pueblo Viejo, Rafael Pombo - Viceversa.",
+		"beneficiarios": "47",
+		"instituci_n_educativa": "Rafael Pombo"
+	},
+	{
+		"id": 56,
+		"recorridos": "Corralejas, La Aldea, El Rebaño, La Portada, Hatogrande, Puente Sopó, Rafael Pombo - Viceversa.",
+		"beneficiarios": "61",
+		"instituci_n_educativa": "Rafael Pombo"
+	},
+	{
+		"id": 57,
+		"recorridos": "Gratamira, Meusa, el CAI, Violeta - Viceversa.",
+		"beneficiarios": "47",
+		"instituci_n_educativa": "Escuela Meusa - La Violeta"
+	},
+	{
+		"id": 58,
+		"recorridos": "Aguacaliente, Toscana, La Violeta - Viceversa.",
+		"beneficiarios": "13",
+		"instituci_n_educativa": "La Violeta"
+	},
+	{
+		"id": 59,
+		"recorridos": "Carolina, San Gabriel, Mercenario, la Violeta, Meusa, Gratamira, cementerio, U.A.I. - Pablo VI - Viceversa.",
+		"beneficiarios": "17",
+		"instituci_n_educativa": "Pablo VI - Unidad de Atención Integral - U.A.I."
+	},
+	{
+		"id": 60,
+		"recorridos": "Rosas de Sopó, Gratamira, El Pino, Chuscal, Marco Fidel Suárez, Pablo VI - Viceversa.",
+		"beneficiarios": "42",
+		"instituci_n_educativa": "Pablo VI - Marco Fidel Suárez"
+	},
+	{
+		"id": 61,
+		"recorridos": "Piedra Herrada, la Violeta - Viceversa.",
+		"beneficiarios": "34",
+		"instituci_n_educativa": "La Violeta"
+	},
+	{
+		"id": 62,
+		"recorridos": "Pueblo Viejo, Variante, El Pino, Gratamira, Meusa, La Violeta - Viceversa.",
+		"beneficiarios": "49",
+		"instituci_n_educativa": "Escuela Meusa - La Violeta"
+	},
+	{
+		"id": 63,
+		"recorridos": "Aposentos, hacienda Flores, la Primavera, la Trinidad, Pablo VI, Marco Fidel Suárez - Viceversa.",
+		"beneficiarios": "14",
+		"instituci_n_educativa": "Pablo VI - Marco Fidel Suárez"
+	},
+	{
+		"id": 64,
+		"recorridos": "Hacienda Flores, Aposentos, la Primavera, colegio Ceis - Viceversa + medio recorrido.",
+		"beneficiarios": "19",
+		"instituci_n_educativa": "Complejo Educativo Integral Sopó - CEIS"
+	},
+	{
+		"id": 65,
+		"recorridos": "Primavera, Aposentos, Rafael Pombo - Viceversa.",
+		"beneficiarios": "18",
+		"instituci_n_educativa": "Rafael Pombo"
+	},
+	{
+		"id": 66,
+		"recorridos": "La Trinidad, Variante, Pueblo Viejo, Rafael Pombo, los Clubes, escuela Hatogrande - Viceversa.",
+		"beneficiarios": "42",
+		"instituci_n_educativa": "Rafael Pombo - Hatogrande"
+	},
+	{
+		"id": 67,
+		"recorridos": "Marco Fidel Suárez, La Trinidad, Primavera, Aposentos - un recorrido.",
+		"beneficiarios": "17",
+		"instituci_n_educativa": "Marco Fidel Suárez"
+	},
+	{
+		"id": 68,
+		"recorridos": "Valle Sopó - Alpina - Pueblo Viejo - Rafael Pombo (Preescolar) - Viceversa",
+		"beneficiarios": "15",
+		"instituci_n_educativa": "Rafael Pombo"
+	},
+	{
+		"id": 69,
+		"recorridos": "Violeta - Piedra Herrada - Mercenario - CDI San Gabriel - Viceversa.",
+		"beneficiarios": "17",
+		"instituci_n_educativa": "Centro de Desarrollo Infantil San Gabriel"
+	},
+	{
+		"id": 70,
+		"recorridos": "San Felipe - Rincón Santo - Mirador - CDI San Agustín - Viceversa.",
+		"beneficiarios": "37",
+		"instituci_n_educativa": "Centro de Desarrollo Infantil San Agustín"
+	},
+	{
+		"id": 71,
+		"recorridos": "Comuneros - Carolina Alta - Bellavista - CDI San Agustín - Viceversa.",
+		"beneficiarios": "26",
+		"instituci_n_educativa": "Centro de Desarrollo Infantil San Agustín"
+	},
+	{
+		"id": 72,
+		"recorridos": "Hatogrande - Lomitas - Aposentos - Variante - CDI San Agustín - Viceversa.",
+		"beneficiarios": "22",
+		"instituci_n_educativa": "Centro de Desarrollo Infantil San Agustín"
+	},
+	{
+		"id": 73,
+		"recorridos": "Briceño - La Diana - CDI San Agustín - Viceversa.",
+		"beneficiarios": "52",
+		"instituci_n_educativa": "Centro de Desarrollo Infantil San Agustín"
+	},
+	{
+		"id": 74,
+		"recorridos": "Pueblo Viejo - CDI San Agustín - Viceversa.",
+		"beneficiarios": "24",
+		"instituci_n_educativa": "Centro de Desarrollo Infantil San Agustín"
+	}
+]

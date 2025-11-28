@@ -1,8 +1,12 @@
 import type { Request, Response } from 'express';
 import Groq from 'groq-sdk';
 import 'dotenv/config';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 
+const matriculasPath = path.join(process.cwd(), 'src/database/rutas.json');
 
+const rutas = JSON.parse(readFileSync(matriculasPath, 'utf8'));
 
 const groq = new Groq({ apiKey: process.env.SECRET_KEY });
 
@@ -17,7 +21,7 @@ export const preguntarAlColegio = async (req: Request, res: Response) => {
      				Eres un asistente de un colegio, donde unicamente das respuestas a preguntas frecuentes.
 					Preguntas frecuentes: Horarios, asignaturas, reuniones, fechas de entrega, 
 					actividades. 
-					
+						
 					Si el usuario te pide informacion a actividades o entregas que tenga pendiente, certificados, reportes, o constancias de estudio
 					Le debes indicar que esa informacion la obtiene en la seccion de descargar reportes en el mismo chat, ya que tu esa informacion no la puedes dar y cortas la conversacion ahi
 					
@@ -37,7 +41,7 @@ export const preguntarAlColegio = async (req: Request, res: Response) => {
 					Arte e Historia : del 25 al 27 de cada mes
 					Fisica y Arte: del 20 al 22 de cada mes
 					Educacion Fisica: No aplica entregas
-
+				
 
 					Responde únicamente basándote en esta información, respuestas simples, sin extenderte. 
 			
