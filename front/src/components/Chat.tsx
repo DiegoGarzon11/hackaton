@@ -114,14 +114,16 @@ function Chat() {
 		setUbication('');
 		setIsBeneficiaries(true);
 		setValueBeneficiaries(id);
+		setId('');
 	};
 	return (
 		<section>
 			<div className='h-full   '>
 				<div
 					id='padre'
-					className={` bg-linear-to-r from-blue-900/80 to-violet-500/70 w-sm ${closeChat ? 'h-10 overflow-hidden' : 'h-1/5 max-h-full'
-						} pb-2 mb-3 rounded-md  `}>
+					className={` bg-linear-to-r from-blue-900/80 to-violet-500/70 w-sm ${
+						closeChat ? 'h-10 overflow-hidden' : 'h-1/5 max-h-'
+					} pb-2 mb-3 rounded-md  `}>
 					<div className='flex justify-between items-center '>
 						<button
 							onClick={() => {
@@ -200,8 +202,6 @@ function Chat() {
 										) : (
 											''
 										)}
-
-
 
 										{option && (
 											<>
@@ -320,6 +320,11 @@ function Chat() {
 									onChange={(e) => setId(e.target.value)}
 									value={id}
 									className='h-11 self-center  w-full resize-none content-center  '
+									onKeyDown={(e) => {
+										if (e.key === 'Enter') {
+											getBeneficiaries(id);
+										}
+									}}
 								/>
 								<SendHorizontal
 									onClick={() => getBeneficiaries(id)}
@@ -338,6 +343,11 @@ function Chat() {
 									onChange={handleUbication}
 									value={ubicacion}
 									className='h-11 self-center  w-full resize-none content-center  '
+									onKeyDown={(e) => {
+										if (e.key === 'Enter') {
+											getRoute(ubicacion);
+										}
+									}}
 								/>
 								<SendHorizontal
 									onClick={() => getRoute(ubicacion)}
@@ -370,7 +380,12 @@ function Chat() {
 								maxLength={200}
 								onChange={handleMessage}
 								value={message}
-								className='h-11 self-center  w-full resize-none content-center  '
+								className='h-11 self-center  w-full  content-center  '
+								onKeyDown={(e) => {
+									if (e.key === 'Enter') {
+										sendMessage();
+									}
+								}}
 							/>
 							<SendHorizontal
 								onClick={sendMessage}
