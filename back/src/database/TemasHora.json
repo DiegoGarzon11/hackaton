@@ -2,11 +2,11 @@
   "temasMasConsultados": [
     {
       "tema": "horarios",
-      "consultas": 2
+      "consultas": 5
     },
     {
       "tema": "fechas_entrega",
-      "consultas": 0
+      "consultas": 6
     },
     {
       "tema": "asignaturas",
@@ -14,45 +14,45 @@
     },
     {
       "tema": "actividades",
-      "consultas": 1
+      "consultas": 7
     },
     {
       "tema": "reuniones",
-      "consultas": 0
+      "consultas": 2
     }
   ],
   "horasPico": [
     {
       "hora": "00:00-03:00",
-      "usuarios": 0
+      "usuarios": 2
     },
     {
       "hora": "03:00-06:00",
-      "usuarios": 0
+      "usuarios": 1
     },
     {
       "hora": "06:00-09:00",
-      "usuarios": 0
+      "usuarios": 1
     },
     {
       "hora": "09:00-12:00",
-      "usuarios": 0
+      "usuarios": 2
     },
     {
       "hora": "12:00-15:00",
-      "usuarios": 7
+      "usuarios": 5
     },
     {
       "hora": "15:00-18:00",
-      "usuarios": 0
+      "usuarios": 7
     },
     {
       "hora": "18:00-21:00",
-      "usuarios": 0
+      "usuarios": 3
     },
     {
       "hora": "21:00-24:00",
-      "usuarios": 0
+      "usuarios": 1
     }
   ]
 }

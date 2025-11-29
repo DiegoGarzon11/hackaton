@@ -4,6 +4,7 @@ import PieChartWithPaddingAngle from './components/ChartStudents';
 import Chat from './components/Chat';
 import { SimpleBarChartHoras, SimpleBarChart } from './components/CompareChart';
 import { socket } from './socket';
+import { ChartSpline } from 'lucide-react';
 function App() {
 	const [data, setData] = useState([]);
 	const [consultas, setConsultas] = useState(0);
@@ -35,28 +36,33 @@ function App() {
 
 	return (
 		<div className='flex items-center'>
-			<div className=' w-1/6 col-span-1 h-full'>
-				<Chat />
-			</div>
 			<div className='w-full '>
 				<div className='flex flex-col justify-center h-2/3'>
 					<div className='w-full'>
 						<header className="bg-[url('/fondo.jpg')] bg-cover py-5 mb-3 rounded-md">
-							<p className='text-center w-full text-2xl mb-5 '>Matriculas en las insituciones educativas año 2022</p>
 							<div className='flex w-full justify-evenly'>
 								{data?.map((d, i) => (
-									<div key={i} className={`rounded-md p-6 w-60 ${i == 0 ? 'bg-linear-to-r from-blue-900/80 to-violet-500/70  text-white' : 'bg-white'}`}>
-										<p className='text-4xl text-start font-semibold '>{d?.estudiantes}</p>
+									<div
+										key={i}
+										className={`rounded-md p-3 w-60 flex flex-col gap-3 ${
+											i == 0 ? 'bg-linear-to-r from-blue-900/80 to-violet-500/70  text-white' : 'bg-white'
+										}`}>
 										<p className={`text-start font-semibold ${i == 0 ? 'text-white' : 'text-blue-900'}`}> Estudiantes {d?.nombre}</p>
+										<p className='text-4xl text-start font-semibold '>{d?.estudiantes}</p>
+										<p className='flex items-center gap-2'>
+											<ChartSpline /> 33% alo año pasado
+										</p>
 									</div>
 								))}
-								<div className='rounded-md p-6 w-60 bg-white'>
-									<p className='text-4xl text-start font-semibold '>{consultasGenral}</p>
+								<div className='rounded-md p-3 w-60 bg-white'>
 									<p className='text-start text-blue-900 font-semibold'> Consultas Frecuentes</p>
+									<p className='text-4xl text-start font-semibold '>{consultasGenral}</p>
+									<ChartSpline />
 								</div>
-								<div className='rounded-md p-6 w-60 bg-white'>
-									<p className='text-4xl text-start font-semibold'>{consultas}</p>
+								<div className='rounded-md p-3 w-60 bg-white'>
 									<p className='text-start text-blue-900 font-semibold'> Consultas Totales</p>
+									<p className='text-4xl text-start font-semibold'>{consultas}</p>
+									<ChartSpline />
 								</div>
 							</div>
 						</header>
@@ -66,7 +72,7 @@ function App() {
 							</div>
 							<div className='bg-white flex justify-center items-center  w-1/3'>
 								<img
-									className='w-full h-full aspect-square object-cover '
+									className='w-full h-auto aspect-square object-cover '
 									style={{
 										filter: 'drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5))',
 									}}
@@ -77,7 +83,7 @@ function App() {
 						</div>
 					</div>
 					<div className='flex items-center mt-3 gap-3 bg-white  '>
-						<div className='flex w-1/2    gap-3 rounded-md'>
+						<div className='flex w-1/2   gap-3 rounded-md'>
 							<div className='flex flex-col items-center w-full  '>
 								<p>Total</p>
 								<PieChartWithPaddingAngle
@@ -109,6 +115,9 @@ function App() {
 						</div>
 					</div>
 				</div>
+			</div>
+			<div className='absolute bottom-0 right-0'>
+				<Chat />
 			</div>
 		</div>
 	);

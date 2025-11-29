@@ -119,27 +119,33 @@ function Chat() {
 		setId('');
 	};
 	return (
-		<section className='w-full'>
-			<div className='h-full w-full  '>
-				<div className='h-full pb-2 mb-3 rounded-md  '>
+		<section>
+			<div className='h-full   '>
+				<div
+					id='padre'
+					className={`  bg-white  mr-3  ${closeChat ? 'h-10 w-14 overflow-hidden' : 'h-1/5 w-[500px] '} pb-2  rounded-md  border border-teal-600 `}>
 					<div
-						id='padre'
-						className=' bg-linear-to-r from-blue-900/80 to-violet-500/70 w-auto mr-3 
-						  mb-3 rounded-md '>
-						<div className='flex justify-between items-center '>
-							<button
-								onClick={() => {
-									setShowChat(false);
-									setAlmacen([]);
-								}}
-								className={`${showChat ? 'visible' : 'invisible'} text-white font-semibold  w-auto my-2 cursor-pointer ml-2    `}>
-								<ArrowLeft className='text-white  ' />
-							</button>
-						</div>
+						className={`flex ${
+							closeChat ? 'justify-center ' : 'justify-between  pr-5 '
+						} items-center bg-linear-to-r from-blue-900/80 to-violet-500/70  pr-5 `}>
+						<button
+							onClick={() => {
+								setShowChat(false);
+								setAlmacen([]);
+							}}
+							className={`${showChat ? 'visible' : 'invisible'} text-white font-semibold  w-auto my-2 cursor-pointer ml-2    `}>
+							<ArrowLeft className='text-white  ' />
+						</button>
+						<button
+							onClick={() => setCloseChat((prev) => !prev)}
+							className='text-white font-semibold  w-auto my-2 cursor-pointer mr-2  flex '>
+							<UserStar className='text-white' />
+						</button>
 					</div>
 					<div
 						id='contenedor'
-						className=' h-96  pt-3  overflow-auto fixed w-64 bg-white py-3'>
+						style={{ height: '500px', overflowY: 'auto' }}
+						className=' h-96 w-full py-3 px-2   overflow-auto bg-white'>
 						<div className='flex flex-col'>
 							<div className='flex'>
 								<UserStar className='text-black' />
@@ -153,12 +159,12 @@ function Chat() {
 										<>
 											<button
 												onClick={downloadReport}
-												className='border border-blue-500 rounded-md bg-white w-full cursor-pointer text-start pl-3 '>
+												className='border border-blue-500 rounded-md bg-linear-to-r from-blue-900/80 to-violet-500/70 py-1 font-semibold text-white w-full cursor-pointer text-start pl-3 '>
 												Descargar Reportes
 											</button>
 											<button
 												onClick={openModal}
-												className='border border-blue-500 rounded-md bg-white w-full cursor-pointer text-start pl-3 '>
+												className='border border-blue-500 rounded-md bg-linear-to-r from-blue-900/80 to-violet-500/70 py-1 font-semibold text-white w-full cursor-pointer text-start pl-3 '>
 												Descargar Certificado
 											</button>
 										</>
@@ -186,14 +192,14 @@ function Chat() {
 											)}
 											<button
 												onClick={() => setOption(true)}
-												className='border border-blue-500 rounded-md bg-white w-full cursor-pointer text-start pl-3 '>
+												className='border border-blue-500 rounded-md bg-linear-to-r from-blue-900/80 to-violet-500/70 py-1 font-semibold text-white w-full cursor-pointer text-start pl-3 '>
 												Rutas
 											</button>
 										</div>
 										{!option ? (
 											<button
 												onClick={() => setShowChat(true)}
-												className='border border-blue-500 rounded-md bg-white w-full cursor-pointer text-start pl-3 mt-3 '>
+												className='border border-blue-500 rounded-md bg-linear-to-r from-blue-900/80 to-violet-500/70 py-1 font-semibold text-white w-full cursor-pointer text-start pl-3 mt-3 '>
 												Hablar con el agente
 											</button>
 										) : (
@@ -205,7 +211,7 @@ function Chat() {
 												<div className='flex flex-col gap-3 items-end mt-3'>
 													<button
 														onClick={getColegios}
-														className='border border-blue-500 rounded-md bg-white w-3/4 cursor-pointer text-start pl-3 '>
+														className='border border-blue-500 rounded-md bg-linear-to-r from-blue-900/80 to-violet-500/70 py-1 font-semibold text-white w-3/4 cursor-pointer text-start pl-3 '>
 														Colegios
 													</button>
 													<button
@@ -216,7 +222,7 @@ function Chat() {
 															setBeneficiaries('');
 															setIsBeneficiaries(false);
 														}}
-														className='border border-blue-500 rounded-md bg-white w-3/4 cursor-pointer text-start pl-3 '>
+														className='border border-blue-500 rounded-md bg-linear-to-r from-blue-900/80 to-violet-500/70 py-1 font-semibold text-white w-3/4 cursor-pointer text-start pl-3 '>
 														Rutas / Trayectos
 													</button>
 													<button
@@ -228,73 +234,10 @@ function Chat() {
 															setIsRoute(false);
 															setShowTextRoute(false);
 														}}
-														className='border border-blue-500 rounded-md bg-white w-3/4 cursor-pointer text-start pl-3 '>
+														className='border border-blue-500 rounded-md bg-linear-to-r from-blue-900/80 to-violet-500/70 py-1 font-semibold text-white w-3/4 cursor-pointer text-start pl-3 '>
 														Beneficiarios
 													</button>
 												</div>
-												{option && beneficiaries != '' ? (
-													<div className='  '>
-														<div className='flex justify-end w-full '>
-															<p className='mr-1.5 bg-green-500 text-start self-end max-w-2/3 wrap-break-word whitespace-normal b-3 py-1 px-3 text-white rounded-md my-5  min-w-32 '>
-																Ruta numero {valueBeneficiaries}
-															</p>
-															<span
-																id='indicator'
-																className='mt-5 relative  bottom-0 right-2.5  h-2  '></span>
-														</div>
-														<div className='flex  gap-3'>
-															<UserStar className='size-24 -top-5 relative text-black' />
-															<div className='bg-white rounded-md mr-2 text-start p-3 h-auto overflow-auto'>
-																<p>{beneficiaries}</p>
-															</div>
-														</div>
-													</div>
-												) : (
-													''
-												)}
-												{option && isRoute && routes.length > 0 ? (
-													<div>
-														<div className='flex justify-end w-full'>
-															<p className='mr-1.5 bg-green-500 text-start self-end max-w-2/3 wrap-break-word whitespace-normal b-3 py-1 px-3 text-white rounded-md my-5  min-w-32 '>
-																{valueRoute}
-															</p>
-															<span
-																id='indicator'
-																className='mt-5 relative  bottom-0 right-2.5  h-2  '></span>
-														</div>
-														<div className='flex '>
-															<UserStar className='size-5  mr-2 relative top-0   text-black' />
-															<div className='bg-[#f6f8fa] rounded-md text-start w-10/12 '>
-																{routes.map((a, i) => (
-																	<div key={i}>
-																		<p>
-																			La ruta numero <b>{a.id}</b> del colegio <b>{a.colegio}</b> hace los siguientes recorridos:{' '}
-																			<b>{a.recorrido}</b>
-																		</p>
-																		<br />
-																	</div>
-																))}
-															</div>
-														</div>
-													</div>
-												) : (
-													''
-												)}
-												{option && isColegio && manualResponse.length > 0 ? (
-													<div className='flex'>
-														<UserStar className='size-10 top-0 relative text-black' />
-														<div className='bg-white rounded-md mx-2 text-start p-3 h-60 '>
-															<p className='font-semibold'>Los colegios que cumplen con la ubicación son:</p>
-															<ul>
-																{manualResponse.map((a, i) => (
-																	<li key={i}>• {a}</li>
-																))}
-															</ul>
-														</div>
-													</div>
-												) : (
-													''
-												)}
 											</>
 										)}
 									</div>
@@ -302,9 +245,11 @@ function Chat() {
 							</div>
 						</div>
 						{almacen.map((a, i) => (
-							<div key={i}>
-								<div className='flex '>
-									<div className='flex justify-end w-full '>
+							<div
+								className=''
+								key={i}>
+								<div className='flex  '>
+									<div className='flex justify-end w-full'>
 										<p className='mr-1.5 bg-green-500 text-start self-end max-w-2/3 wrap-break-word whitespace-normal b-3 py-1 px-3 text-white rounded-md my-5  min-w-32 '>
 											{a.user}
 										</p>
@@ -316,19 +261,64 @@ function Chat() {
 								<div className='flex '>
 									<UserStar className='text-black' />
 
-									<p
-										ref={messagesEndRef}
-										className=' ml-1.5 bg-[#f6f8fa] text-start self-start max-w-2/3 wrap-break-word whitespace-normal py-1 px-3 text-black rounded-md '>
+									<p className=' ml-1.5 bg-[#f6f8fa] text-start self-start max-w-2/3 wrap-break-word whitespace-normal py-1 px-3 text-black rounded-md '>
 										{a?.system}
 									</p>
 								</div>
 							</div>
 						))}
+						<div ref={messagesEndRef} />
 					</div>
-
+					{option && isRoute && routes.length > 0 ? (
+						<div>
+							<div className='flex justify-end w-full '>
+								<p className='mr-1.5 bg-green-500 text-start self-end max-w-2/3 wrap-break-word whitespace-normal b-3 py-1 px-3 text-white rounded-md my-5  min-w-32 '>
+									{valueRoute}
+								</p>
+								<span
+									id='indicator'
+									className='mt-5 relative  bottom-0 right-2.5  h-2  '></span>
+							</div>
+							<div className='flex w-full px-2 '>
+								<UserStar className='size-30 -top-10 relative text-black' />
+								<div className='bg-white rounded-md mx-2 text-start p-3 h-60 overflow-auto'>
+									{routes.map((a, i) => (
+										<div key={i}>
+											<p>
+												La ruta numero <b>{a.id}</b> del colegio <b>{a.colegio}</b> hace los siguientes recorridos: <b>{a.recorrido}</b>
+											</p>
+											<br />
+										</div>
+									))}
+								</div>
+							</div>
+						</div>
+					) : (
+						''
+					)}
+					{option && beneficiaries != '' ? (
+						<>
+							<div className='flex justify-end w-full'>
+								<p className='mr-1.5 bg-green-500 text-start self-end max-w-2/3 wrap-break-word whitespace-normal b-3 py-1 px-3 text-white rounded-md my-5  min-w-32 '>
+									Ruta numero {valueBeneficiaries}
+								</p>
+								<span
+									id='indicator'
+									className='mt-5 relative  bottom-0 right-2.5  h-2  '></span>
+							</div>
+							<div className='flex  gap-3 px-2 '>
+								<UserStar className='size-16 -top-5 relative text-black' />
+								<div className='bg-[#f6f8fa] rounded-md mr-2 text-start p-3 h-auto overflow-auto'>
+									<p>{beneficiaries}</p>
+								</div>
+							</div>
+						</>
+					) : (
+						''
+					)}
 					{isBeneficiaries && (
 						<>
-							<div className='flex items-center m-2 bg-white rounded-4xl px-3  absolute bottom-0 w-64 ring-1 left-0 ring-cyan-800'>
+							<div className='flex items-center m-2 bg-[#f6f8fa] rounded-4xl px-3 '>
 								<textarea
 									placeholder='Escribe el numero de ruta'
 									maxLength={200}
@@ -351,7 +341,7 @@ function Chat() {
 
 					{showTextRoute && (
 						<>
-							<div className='flex items-center m-2 bg-white rounded-4xl px-3 absolute bottom-0 ring-1 w-64 left-0 ring-cyan-800 '>
+							<div className='flex items-center m-2 bg-[#f6f8fa] rounded-4xl px-3 '>
 								<textarea
 									placeholder='Escribe tu direccion'
 									maxLength={200}
@@ -372,14 +362,30 @@ function Chat() {
 						</>
 					)}
 
+					{option && isColegio && manualResponse.length > 0 ? (
+						<div className='flex px-2 '>
+							<UserStar className='size-8 top-0 relative text-black' />
+							<div className='bg-[#f6f8fa] rounded-md mx-2 text-start p-3 h-60 overflow-auto'>
+								<p className='font-semibold'>Los colegios que cumplen con la ubicación son:</p>
+								<ul>
+									{manualResponse.map((a, i) => (
+										<li key={i}>• {a}</li>
+									))}
+								</ul>
+							</div>
+						</div>
+					) : (
+						''
+					)}
+
 					{showChat && (
-						<div className='flex items-center m-2 bg-white rounded-4xl px-3 bottom-0 absolute justify-center self-center left-0 ring-1 ring-cyan-800  mb-3 w-64'>
+						<div className='flex items-center m-2 bg-[#f6f8fa] rounded-4xl px-3 '>
 							<textarea
 								placeholder='Escribe lo que quieras'
 								maxLength={200}
 								onChange={handleMessage}
 								value={message}
-								className='h-11 self-center  w-full  content-center resize-none  '
+								className='h-11 self-center  w-full  content-center  '
 								onKeyDown={(e) => {
 									if (e.key === 'Enter') {
 										sendMessage();
