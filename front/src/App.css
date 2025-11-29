@@ -2,17 +2,17 @@
 	margin: 0 auto;
 	padding: 2rem;
 	text-align: center;
-	height: 100dvh;
 	background: #b7b3b3;
 }
 
 #contenedor::-webkit-scrollbar {
 	background-color: transparent;
-  width: 5px;
+	width: 5px;
 }
+
 #contenedor::-webkit-scrollbar-thumb {
 	background-color: rgb(202, 201, 201);
-  
+
 }
 
 textarea::-webkit-scrollbar {
@@ -22,6 +22,7 @@ textarea::-webkit-scrollbar {
 textarea:focus {
 	outline: none;
 }
+
 #indicator {
 	border-bottom: 10px solid transparent;
 	border-left: 12px solid #00c951;
