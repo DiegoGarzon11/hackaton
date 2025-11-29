@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../App.css';
 import { ArrowLeft, Minimize, SendHorizontal, UserStar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Route {
 	id: number;
@@ -119,9 +120,8 @@ function Chat() {
 			<div className='h-full   '>
 				<div
 					id='padre'
-					className={` bg-linear-to-r from-blue-900/80 to-violet-500/70 w-sm ${
-						closeChat ? 'h-10 overflow-hidden' : 'h-1/5'
-					} pb-2 mb-3 rounded-md  `}>
+					className={` bg-linear-to-r from-blue-900/80 to-violet-500/70 w-sm ${closeChat ? 'h-10 overflow-hidden' : 'h-1/5'
+						} pb-2 mb-3 rounded-md  `}>
 					<div className='flex justify-between items-center '>
 						<button
 							onClick={() => {
@@ -200,6 +200,8 @@ function Chat() {
 										) : (
 											''
 										)}
+
+
 
 										{option && (
 											<>
