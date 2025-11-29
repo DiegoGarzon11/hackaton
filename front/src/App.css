@@ -1,20 +1,31 @@
 #root {
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  height: 100dvh;
-  background: #b7b3b3;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+	height: 100dvh;
+	background: #b7b3b3;
 }
 
-.messages::-webkit-scrollbar {
-  display: none;
+#contenedor::-webkit-scrollbar {
+	background-color: transparent;
+  width: 5px;
+}
+#contenedor::-webkit-scrollbar-thumb {
+	background-color: rgb(202, 201, 201);
+  
 }
 
 textarea::-webkit-scrollbar {
-  display: none;
-
+	display: none;
 }
 
 textarea:focus {
-  outline: none;
+	outline: none;
+}
+#indicator {
+	border-bottom: 10px solid transparent;
+	border-left: 12px solid #00c951;
+}
+#padre{
+  transition: all 0.5s ease-in-out;
 }

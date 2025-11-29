@@ -1,5 +1,4 @@
 import type { Request, Response } from 'express';
-import Groq from 'groq-sdk';
 import 'dotenv/config';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';

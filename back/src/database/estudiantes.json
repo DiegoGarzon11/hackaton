@@ -1,0 +1,572 @@
+[
+	{
+		"id": 1,
+		"nombre": "Diego",
+		"apellido": "García",
+		"edad": 16,
+		"curso": "11A",
+		"fallas": 2,
+		"notas": {
+			"Matematicas": 85,
+			"Español": 90,
+			"Ingles": 88,
+			"Arte": 32,
+			"Ciencias": 87,
+			"EducacionFisica": 95,
+			"Fisica": 80,
+			"Historia": 89,
+			"Tecnologia": 10
+		}
+	},
+	{
+		"id": 2,
+		"nombre": "Ana",
+		"apellido": "Martínez",
+		"edad": 15,
+		"curso": "10B",
+		"fallas": 0,
+		"notas": {
+			"Matematicas": 78,
+			"Español": 85,
+			"Ingles": 90,
+			"Arte": 80,
+			"Ciencias": 82,
+			"EducacionFisica": 88,
+			"Fisica": 75,
+			"Historia": 80,
+			"Tecnologia": 86
+		}
+	},
+	{
+		"id": 3,
+		"nombre": "Carlos",
+		"apellido": "Ramírez",
+		"edad": 16,
+		"curso": "11B",
+		"fallas": 8,
+		"notas": {
+			"Matematicas": 30,
+			"Español": 20,
+			"Ingles": 20,
+			"Arte": 54,
+			"Ciencias": 20,
+			"EducacionFisica": 20,
+			"Fisica": 20,
+			"Historia": 76,
+			"Tecnologia": 40
+		}
+	},
+	{
+		"id": 4,
+		"nombre": "Laura",
+		"apellido": "Sánchez",
+		"edad": 15,
+		"curso": "10A",
+		"fallas": 8,
+		"notas": {
+			"Matematicas": 50,
+			"Español": 20,
+			"Ingles": 20,
+			"Arte": 25,
+			"Ciencias": 56,
+			"EducacionFisica": 32,
+			"Fisica": 20,
+			"Historia": 76,
+			"Tecnologia": 40
+		}
+	},
+	{
+		"id": 5,
+		"nombre": "Sofía",
+		"apellido": "Lopez",
+		"edad": 16,
+		"curso": "11A",
+		"fallas": 0,
+		"notas": {
+			"Matematicas": 95,
+			"Español": 93,
+			"Ingles": 91,
+			"Arte": 96,
+			"Ciencias": 92,
+			"EducacionFisica": 94,
+			"Fisica": 90,
+			"Historia": 92,
+			"Tecnologia": 95
+		}
+	},
+	{
+		"id": 6,
+		"nombre": "Andrés",
+		"apellido": "Gómez",
+		"edad": 15,
+		"curso": "10C",
+		"fallas": 0,
+		"notas": {
+			"Matematicas": 70,
+			"Español": 75,
+			"Ingles": 78,
+			"Arte": 82,
+			"Ciencias": 80,
+			"EducacionFisica": 85,
+			"Fisica": 72,
+			"Historia": 74,
+			"Tecnologia": 79
+		}
+	},
+	{
+		"id": 7,
+		"nombre": "Valentina",
+		"apellido": "Torres",
+		"edad": 16,
+		"curso": "11B",
+		"fallas": 2,
+		"notas": {
+			"Matematicas": 88,
+			"Español": 85,
+			"Ingles": 90,
+			"Arte": 91,
+			"Ciencias": 87,
+			"EducacionFisica": 92,
+			"Fisica": 86,
+			"Historia": 88,
+			"Tecnologia": 90
+		}
+	},
+	{
+		"id": 8,
+		"nombre": "Javier",
+		"apellido": "Hernández",
+		"edad": 15,
+		"curso": "10B",
+		"fallas": 3,
+		"notas": {
+			"Matematicas": 82,
+			"Español": 79,
+			"Ingles": 85,
+			"Arte": 80,
+			"Ciencias": 83,
+			"EducacionFisica": 86,
+			"Fisica": 81,
+			"Historia": 80,
+			"Tecnologia": 84
+		}
+	},
+	{
+		"id": 9,
+		"nombre": "Camila",
+		"apellido": "Rodríguez",
+		"edad": 16,
+		"curso": "11C",
+		"fallas": 1,
+		"notas": {
+			"Matematicas": 91,
+			"Español": 89,
+			"Ingles": 92,
+			"Arte": 90,
+			"Ciencias": 93,
+			"EducacionFisica": 90,
+			"Fisica": 88,
+			"Historia": 91,
+			"Tecnologia": 92
+		}
+	},
+	{
+		"id": 10,
+		"nombre": "Luis",
+		"apellido": "Pérez",
+		"edad": 15,
+		"curso": "10A",
+		"fallas": 0,
+		"notas": {
+			"Matematicas": 75,
+			"Español": 78,
+			"Ingles": 80,
+			"Arte": 79,
+			"Ciencias": 77,
+			"EducacionFisica": 85,
+			"Fisica": 73,
+			"Historia": 76,
+			"Tecnologia": 78
+		}
+	},
+	{
+		"id": 11,
+		"nombre": "Mariana",
+		"apellido": "Vargas",
+		"edad": 16,
+		"curso": "11A",
+		"fallas": 2,
+		"notas": {
+			"Matematicas": 84,
+			"Español": 88,
+			"Ingles": 85,
+			"Arte": 90,
+			"Ciencias": 86,
+			"EducacionFisica": 92,
+			"Fisica": 83,
+			"Historia": 87,
+			"Tecnologia": 89
+		}
+	},
+	{
+		"id": 12,
+		"nombre": "Sebastián",
+		"apellido": "Castillo",
+		"edad": 15,
+		"curso": "10C",
+		"fallas": 3,
+		"notas": {
+			"Matematicas": 78,
+			"Español": 80,
+			"Ingles": 82,
+			"Arte": 75,
+			"Ciencias": 79,
+			"EducacionFisica": 85,
+			"Fisica": 77,
+			"Historia": 78,
+			"Tecnologia": 80
+		}
+	},
+	{
+		"id": 13,
+		"nombre": "Natalia",
+		"apellido": "Moreno",
+		"edad": 16,
+		"curso": "11B",
+		"fallas": 6,
+		"notas": {
+			"Matematicas": 90,
+			"Español": 92,
+			"Ingles": 89,
+			"Arte": 94,
+			"Ciencias": 91,
+			"EducacionFisica": 90,
+			"Fisica": 88,
+			"Historia": 92,
+			"Tecnologia": 93
+		}
+	},
+	{
+		"id": 14,
+		"nombre": "Juan",
+		"apellido": "Cruz",
+		"edad": 15,
+		"curso": "10A",
+		"fallas": 4,
+		"notas": {
+			"Matematicas": 76,
+			"Español": 78,
+			"Ingles": 80,
+			"Arte": 77,
+			"Ciencias": 75,
+			"EducacionFisica": 83,
+			"Fisica": 74,
+			"Historia": 76,
+			"Tecnologia": 79
+		}
+	},
+	{
+		"id": 15,
+		"nombre": "Isabella",
+		"apellido": "Rojas",
+		"edad": 16,
+		"curso": "11C",
+		"fallas": 0,
+		"notas": {
+			"Matematicas": 95,
+			"Español": 94,
+			"Ingles": 92,
+			"Arte": 96,
+			"Ciencias": 93,
+			"EducacionFisica": 95,
+			"Fisica": 91,
+			"Historia": 92,
+			"Tecnologia": 96
+		}
+	},
+	{
+		"id": 16,
+		"nombre": "Mateo",
+		"apellido": "Ortiz",
+		"edad": 15,
+		"curso": "10B",
+		"fallas": 2,
+		"notas": {
+			"Matematicas": 82,
+			"Español": 80,
+			"Ingles": 85,
+			"Arte": 78,
+			"Ciencias": 83,
+			"EducacionFisica": 88,
+			"Fisica": 81,
+			"Historia": 82,
+			"Tecnologia": 84
+		}
+	},
+	{
+		"id": 17,
+		"nombre": "Camila",
+		"apellido": "Suárez",
+		"edad": 16,
+		"curso": "11A",
+		"fallas": 1,
+		"notas": {
+			"Matematicas": 91,
+			"Español": 90,
+			"Ingles": 92,
+			"Arte": 93,
+			"Ciencias": 90,
+			"EducacionFisica": 91,
+			"Fisica": 89,
+			"Historia": 90,
+			"Tecnologia": 92
+		}
+	},
+	{
+		"id": 18,
+		"nombre": "Andres",
+		"apellido": "Fuentes",
+		"edad": 15,
+		"curso": "10C",
+		"fallas": 3,
+		"notas": {
+			"Matematicas": 77,
+			"Español": 79,
+			"Ingles": 82,
+			"Arte": 76,
+			"Ciencias": 78,
+			"EducacionFisica": 84,
+			"Fisica": 75,
+			"Historia": 77,
+			"Tecnologia": 80
+		}
+	},
+	{
+		"id": 19,
+		"nombre": "Valeria",
+		"apellido": "Cano",
+		"edad": 16,
+		"curso": "11B",
+		"fallas": 2,
+		"notas": {
+			"Matematicas": 88,
+			"Español": 87,
+			"Ingles": 90,
+			"Arte": 89,
+			"Ciencias": 86,
+			"EducacionFisica": 91,
+			"Fisica": 87,
+			"Historia": 88,
+			"Tecnologia": 90
+		}
+	},
+	{
+		"id": 20,
+		"nombre": "Daniel",
+		"apellido": "Vélez",
+		"edad": 15,
+		"curso": "10A",
+		"fallas": 4,
+		"notas": {
+			"Matematicas": 74,
+			"Español": 76,
+			"Ingles": 79,
+			"Arte": 75,
+			"Ciencias": 77,
+			"EducacionFisica": 82,
+			"Fisica": 73,
+			"Historia": 74,
+			"Tecnologia": 78
+		}
+	},
+	{
+		"id": 21,
+		"nombre": "Fernanda",
+		"apellido": "Mendoza",
+		"edad": 16,
+		"curso": "11A",
+		"fallas": 4,
+		"notas": {
+			"Matematicas": 50,
+			"Español": 20,
+			"Ingles": 20,
+			"Arte": 25,
+			"Ciencias": 88,
+			"EducacionFisica": 91,
+			"Fisica": 85,
+			"Historia": 87,
+			"Tecnologia": 90
+		}
+	},
+	{
+		"id": 22,
+		"nombre": "Ricardo",
+		"apellido": "Salazar",
+		"edad": 15,
+		"curso": "10B",
+		"fallas": 4,
+		"notas": {
+			"Matematicas": 50,
+			"Español": 20,
+			"Ingles": 20,
+			"Arte": 25,
+			"Ciencias": 79,
+			"EducacionFisica": 12,
+			"Fisica": 20,
+			"Historia": 20,
+			"Tecnologia": 81
+		}
+	},
+	{
+		"id": 23,
+		"nombre": "Paola",
+		"apellido": "Jiménez",
+		"edad": 16,
+		"curso": "11B",
+		"fallas": 2,
+		"notas": {
+			"Matematicas": 90,
+			"Español": 92,
+			"Ingles": 91,
+			"Arte": 94,
+			"Ciencias": 90,
+			"EducacionFisica": 92,
+			"Fisica": 88,
+			"Historia": 90,
+			"Tecnologia": 93
+		}
+	},
+	{
+		"id": 24,
+		"nombre": "Mateo",
+		"apellido": "Valencia",
+		"edad": 15,
+		"curso": "10C",
+		"fallas": 4,
+		"notas": {
+			"Matematicas": 50,
+			"Español": 20,
+			"Ingles": 20,
+			"Arte": 25,
+			"Ciencias": 12,
+			"EducacionFisica": 83,
+			"Fisica": 74,
+			"Historia": 23,
+			"Tecnologia": 80
+		}
+	},
+	{
+		"id": 25,
+		"nombre": "Daniela",
+		"apellido": "Rincón",
+		"edad": 16,
+		"curso": "11C",
+		"fallas": 9,
+		"notas": {
+			"Matematicas": 94,
+			"Español": 95,
+			"Ingles": 92,
+			"Arte": 96,
+			"Ciencias": 93,
+			"EducacionFisica": 95,
+			"Fisica": 91,
+			"Historia": 92,
+			"Tecnologia": 95
+		}
+	},
+	{
+		"id": 26,
+		"nombre": "Santiago",
+		"apellido": "Navarro",
+		"edad": 15,
+		"curso": "10A",
+		"fallas": 2,
+		"notas": {
+			"Matematicas": 81,
+			"Español": 79,
+			"Ingles": 83,
+			"Arte": 78,
+			"Ciencias": 82,
+			"EducacionFisica": 87,
+			"Fisica": 80,
+			"Historia": 81,
+			"Tecnologia": 84
+		}
+	},
+	{
+		"id": 27,
+		"nombre": "Laura",
+		"apellido": "Quintero",
+		"edad": 16,
+		"curso": "11A",
+		"fallas": 1,
+		"notas": {
+			"Matematicas": 92,
+			"Español": 91,
+			"Ingles": 93,
+			"Arte": 94,
+			"Ciencias": 90,
+			"EducacionFisica": 92,
+			"Fisica": 89,
+			"Historia": 91,
+			"Tecnologia": 93
+		}
+	},
+	{
+		"id": 28,
+		"nombre": "Andrés",
+		"apellido": "Reyes",
+		"edad": 15,
+		"curso": "10B",
+		"fallas": 3,
+		"notas": {
+			"Matematicas": 77,
+			"Español": 78,
+			"Ingles": 81,
+			"Arte": 76,
+			"Ciencias": 79,
+			"EducacionFisica": 85,
+			"Fisica": 75,
+			"Historia": 77,
+			"Tecnologia": 80
+		}
+	},
+	{
+		"id": 29,
+		"nombre": "Valeria",
+		"apellido": "Ramos",
+		"edad": 16,
+		"curso": "11B",
+		"fallas": 2,
+		"notas": {
+			"Matematicas": 88,
+			"Español": 87,
+			"Ingles": 90,
+			"Arte": 89,
+			"Ciencias": 86,
+			"EducacionFisica": 91,
+			"Fisica": 87,
+			"Historia": 88,
+			"Tecnologia": 90
+		}
+	},
+	{
+		"id": 30,
+		"nombre": "Diego",
+		"apellido": "Montoya",
+		"edad": 15,
+		"curso": "10C",
+		"fallas": 7,
+		"notas": {
+			"Matematicas": 74,
+			"Español": 75,
+			"Ingles": 78,
+			"Arte": 76,
+			"Ciencias": 77,
+			"EducacionFisica": 82,
+			"Fisica": 73,
+			"Historia": 74,
+			"Tecnologia": 78
+		}
+	}
+]
