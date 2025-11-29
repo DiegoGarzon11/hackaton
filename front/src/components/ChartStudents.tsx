@@ -19,7 +19,6 @@ export default function PieChartWithPaddingAngle({ isAnimationActive = true }: {
 		if (active && payload && payload.length) {
 			// payload[0].payload contiene los datos del slice
 			const data = payload[0].payload;
-			console.log(data);
 
 			return (
 				<div className="bg-white border rounded-lg p-2 shadow">
