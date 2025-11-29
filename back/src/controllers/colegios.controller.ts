@@ -30,7 +30,7 @@ export const CountBeneficiaries = async (req: Request, res: Response) => {
 	const rutasFiltradas = rutas.filter((ruta: any) => ruta.id == id);
 	let response = '';
 	for (let i = 0; i < rutasFiltradas.length; i++) {
-		response += `la ruta numero ${rutasFiltradas[i].id} tiene ${rutasFiltradas[i].beneficiarios} beneficiarios`;
+		response += `la ruta numero ${rutasFiltradas[i].id} tiene ${rutasFiltradas[i].beneficiarios} beneficiarios, hace el trayecto ${rutasFiltradas[i].recorridos}`;
 	}
 	res.json({ response });
 };
