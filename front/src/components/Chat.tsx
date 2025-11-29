@@ -60,9 +60,14 @@ function Chat() {
 			<div className='h-full   '>
 				<div
 					id='padre'
+<<<<<<< HEAD
 					className={` bg-linear-to-r from-blue-900/80 to-violet-500/70 w-sm ${
 						closeChat ? 'h-10 overflow-hidden' : 'h-1/5'
 					} pb-2 mb-3 rounded-md  `}>
+=======
+					className={` bg-linear-to-r from-blue-900/80 to-violet-500/70 w-sm ${closeChat ? 'h-10 overflow-hidden' : 'h-1/5'
+						} pb-2 mb-3 rounded-md  `}>
+>>>>>>> 5b82538b2c5a4c7de3e8cb0afcb7df55e81276b9
 					<div className='flex justify-end items-center '>
 						<button
 							onClick={() => setCloseChat((prev) => !prev)}
