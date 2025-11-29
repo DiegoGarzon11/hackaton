@@ -1,44 +1,58 @@
 {
-	"usoApp": {
-		"horasPico": [
-			{
-				"hora": "07:00-09:00",
-				"usuarios": 320
-			},
-			{
-				"hora": "12:00-14:00",
-				"usuarios":190
-			},
-			{
-				"hora": "18:00-21:00",
-				"usuarios": 400
-			},
-			{
-				"hora": "18:00-21:00",
-				"usuarios": 240
-			}
-		]
-	},
 	"temasMasConsultados": [
 		{
 			"tema": "horarios",
-			"consultas": 650
+			"consultas": 0
 		},
 		{
-			"tema": "fechas",
-			"consultas": 980
+			"tema": "fechas_entrega",
+			"consultas": 0
 		},
 		{
 			"tema": "asignaturas",
-			"consultas": 760
+			"consultas": 0
 		},
 		{
 			"tema": "actividades",
-			"consultas": 572
+			"consultas": 0
 		},
 		{
 			"tema": "reuniones",
-			"consultas": 712
+			"consultas": 0
+		}
+	],
+	"horasPico": [
+		{
+			"hora": "00:00-03:00",
+			"usuarios": 0
+		},
+		{
+			"hora": "03:00-06:00",
+			"usuarios": 0
+		},
+		{
+			"hora": "06:00-09:00",
+			"usuarios": 0
+		},
+		{
+			"hora": "09:00-12:00",
+			"usuarios": 0
+		},
+		{
+			"hora": "12:00-15:00",
+			"usuarios": 0
+		},
+		{
+			"hora": "15:00-18:00",
+			"usuarios": 0
+		},
+		{
+			"hora": "18:00-21:00",
+			"usuarios": 0
+		},
+		{
+			"hora": "21:00-24:00",
+			"usuarios": 0
 		}
 	]
 }

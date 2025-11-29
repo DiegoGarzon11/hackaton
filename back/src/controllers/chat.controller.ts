@@ -1,17 +1,14 @@
 import type { Request, Response } from 'express';
 import Groq from 'groq-sdk';
 import 'dotenv/config';
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
+import { detectCategory } from '../services/faq.service.ts';
 
-const matriculasPath = path.join(process.cwd(), 'src/database/rutas.json');
-
-const rutas = JSON.parse(readFileSync(matriculasPath, 'utf8'));
 
 const groq = new Groq({ apiKey: process.env.SECRET_KEY });
 
 export const preguntarAlColegio = async (req: Request, res: Response) => {
 	const { message } = req.body;
+	detectCategory(message);
 	const getGroqChatCompletion = () => {
 		return groq.chat.completions.create({
 			messages: [

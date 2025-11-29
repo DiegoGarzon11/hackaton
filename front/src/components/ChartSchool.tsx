@@ -12,7 +12,7 @@ const LineBarAreaComposedChart = () => {
 	}, []);
 	return (
 		<ComposedChart
-			style={{ width: '100%', maxWidth: '100%', maxHeight: '50vh', aspectRatio: 1.618 }}
+			style={{ width: '100%', maxWidth: '100%', maxHeight: '40vh', aspectRatio: 1.618 }}
 			responsive
 			data={data}
 			margin={{

@@ -1,13 +1,17 @@
 import { useEffect, useState } from 'react';
-import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ComposedChart } from 'recharts';
-
+import { Bar, CartesianGrid, ComposedChart, Legend, Tooltip, XAxis, YAxis } from 'recharts';
+import { socket } from '../socket';
 export const SimpleBarChart = () => {
 	const [data, setData] = useState([]);
 	useEffect(() => {
 		fetch('http://localhost:4000/api/reports/sendInfo')
 			.then((res) => res.json())
 			.then((data) => setData(data?.temasMasConsultados));
-		console.log(data);
+	}, []);
+	useEffect(() => {
+		socket.on('statsUpdated', (data) => {
+			setData(data?.temasMasConsultados);
+		});
 	}, []);
 	return (
 		<ComposedChart
@@ -43,7 +47,12 @@ export const SimpleBarChartHoras = () => {
 	useEffect(() => {
 		fetch('http://localhost:4000/api/reports/sendInfo')
 			.then((res) => res.json())
-			.then((data) => setData(data?.usoApp?.horasPico));
+			.then((data) => setData(data.horasPico));
+	}, []);
+	useEffect(() => {
+		socket.on('statsUpdated', (data) => {
+			setData(data.horasPico);
+		});
 	}, []);
 	return (
 		<ComposedChart
