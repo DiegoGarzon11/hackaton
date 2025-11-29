@@ -50,15 +50,15 @@ function App() {
 				<div className='flex w-[70%] h-full mt-20 gap-24'>
 					<div className='flex flex-col items-center w-full bg-white rounded-md'>
 						<p>Conteo</p>
-						<PieChartWithPaddingAngle />
+						<PieChartWithPaddingAngle titulo='conteo' />
 					</div>
 					<div className='flex flex-col items-center w-full bg-white rounded-md'>
 						<p>Conteo</p>
-						<PieChartWithPaddingAngle />
+						<PieChartWithPaddingAngle titulo='masculino' />
 					</div>
 					<div className='flex flex-col items-center w-full bg-white rounded-md'>
 						<p>Conteo</p>
-						<PieChartWithPaddingAngle />
+						<PieChartWithPaddingAngle titulo='femenino' />
 					</div>
 				</div>
 
