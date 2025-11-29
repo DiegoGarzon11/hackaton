@@ -42,21 +42,21 @@ function App() {
 				<div className='flex flex-col justify-center h-2/3'>
 					<div className='w-full'>
 						<header className="bg-[url('/fondo.jpg')] bg-cover py-5 mb-3 rounded-md">
-							<p className='text-center w-full text-2xl font-bold mb-5'>Matriculas en las insituciones educativas año 2022</p>
+							<p className='text-center w-full text-2xl mb-5 '>Matriculas en las insituciones educativas año 2022</p>
 							<div className='flex w-full justify-evenly'>
-								{data?.map((d) => (
-									<div className='rounded-md p-6 w-60 bg-white'>
-										<p className='text-4xl'>{d?.estudiantes}</p>
-										<p> Estudiantes {d?.nombre}</p>
+								{data?.map((d, i) => (
+									<div key={i} className={`rounded-md p-6 w-60 ${i == 0 ? 'bg-linear-to-r from-blue-900/80 to-violet-500/70  text-white' : 'bg-white'}`}>
+										<p className='text-4xl text-start font-semibold '>{d?.estudiantes}</p>
+										<p className={`text-start font-semibold ${i == 0 ? 'text-white' : 'text-blue-900'}`}> Estudiantes {d?.nombre}</p>
 									</div>
 								))}
 								<div className='rounded-md p-6 w-60 bg-white'>
-									<p className='text-4xl'>{consultasGenral}</p>
-									<p> Consultas Frecuentes</p>
+									<p className='text-4xl text-start font-semibold '>{consultasGenral}</p>
+									<p className='text-start text-blue-900 font-semibold'> Consultas Frecuentes</p>
 								</div>
 								<div className='rounded-md p-6 w-60 bg-white'>
-									<p className='text-4xl'>{consultas}</p>
-									<p> Consultas Totales</p>
+									<p className='text-4xl text-start font-semibold'>{consultas}</p>
+									<p className='text-start text-blue-900 font-semibold'> Consultas Totales</p>
 								</div>
 							</div>
 						</header>
