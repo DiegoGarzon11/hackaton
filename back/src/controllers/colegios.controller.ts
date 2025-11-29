@@ -46,7 +46,7 @@ export const getByRoute = async (req: Request, res: Response) => {
 	const results: any = fuse.search(ubicacion);
 	let resultados = [];
 	for (let i = 0; i < results.length; i++) {
-		resultados.push({ id: results[i].item.id, colegio: results[i].item.instituci_n_educativa });
+		resultados.push({ id: results[i].item.id, colegio: results[i].item.instituci_n_educativa ,recorrido: results[i].item.recorridos});
 	}
 	res.json({ resultados });
 };
