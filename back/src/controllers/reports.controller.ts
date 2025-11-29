@@ -71,6 +71,8 @@ export const DownloadReports = async (req: Request, res: Response) => {
 		});
 	}
 
+
+
 	res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 	res.setHeader('Content-Disposition', 'attachment; filename=reportes.xlsx');
 
@@ -80,44 +82,45 @@ export const DownloadReports = async (req: Request, res: Response) => {
 
 export const DownloadCertificate = async (req: Request, res: Response) => {
 	const { nombre } = req.params;
-  const doc = new PDFDocument({
-    size: 'A4',
-    margins: { top: 50, bottom: 50, left: 50, right: 50 },
-  });
+	const doc = new PDFDocument({
+		size: 'A4',
+		margins: { top: 50, bottom: 50, left: 50, right: 50 },
+	});
 
-  res.setHeader('Content-Disposition', 'attachment; filename="certificado.pdf"');
-  res.setHeader('Content-Type', 'application/pdf');
+	res.setHeader('Content-Disposition', 'attachment; filename="certificado.pdf"');
+	res.setHeader('Content-Type', 'application/pdf');
 
-  doc.pipe(res);
+	doc.pipe(res);
 
-  doc.rect(0, 0, doc.page.width, doc.page.height).fill('#ffffff');
+	doc.rect(0, 0, doc.page.width, doc.page.height).fill('#ffffff');
 
-  doc.fontSize(30).fillColor('#000000').text('CERTIFICADO', { align: 'center', underline: false });
+	doc.fontSize(30).fillColor('#000000').text('CERTIFICADO', { align: 'center', underline: false });
 
 
-  doc.moveDown(2);
+	doc.moveDown(2);
 
-  doc.fontSize(14).fillColor('#000000').text('Este certificado es permiado a', { align: 'center' });
+	doc.fontSize(14).fillColor('#000000').text('Este certificado es permiado a', { align: 'center' });
 
-  doc.moveDown(0.5);
+	doc.moveDown(0.5);
 
-  doc.fontSize(24).fillColor('#000000').text(`${nombre}`.toUpperCase(), { align: 'center', underline: true });
+	doc.fontSize(24).fillColor('#000000').text(`${nombre}`.toUpperCase(), { align: 'center', underline: true });
 
-  doc.moveDown(1);
+	doc.moveDown(1);
 
-  doc.fontSize(14).fillColor('#555555').text(`Por completar exitasacmente el curso`, { align: 'center' });
+	doc.fontSize(14).fillColor('#555555').text(`Por completar exitasacmente el curso`, { align: 'center' });
 
-  doc.moveDown(4);
+	doc.moveDown(4);
 
-  const leftX = 100;
-  const rightX = 400;
+	const leftX = 100;
+	const rightX = 400;
 
-  doc.fontSize(12).fillColor('#000000').text(`DATE\n${new Date().toLocaleDateString()}`, leftX, doc.y, { align: 'left' });
+	doc.fontSize(12).fillColor('#000000').text(`DATE\n${new Date().toLocaleDateString()}`, leftX, doc.y, { align: 'left' });
 
-  doc.fontSize(12)
-    .fillColor('#000000')
-    .text(`TRAINER\n_____ChatDSG_______`, rightX, doc.y - 15, { align: 'left' });
+	doc.fontSize(12)
+		.fillColor('#000000')
+		.text(`TRAINER\n_____ChatDSG_______`, rightX, doc.y - 15, { align: 'left' });
 
-  // Finalizar PDF
-  doc.end();
+	// Finalizar PDF
+	doc.end();
 };
+
