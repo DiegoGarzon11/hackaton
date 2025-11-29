@@ -56,7 +56,7 @@ const LineBarAreaComposedChart = () => {
 	}, []);
 	return (
 		<ComposedChart
-			style={{ width: '100%', maxWidth: '900px', maxHeight: '70vh', aspectRatio: 1.618 }}
+			style={{ width: '100%', maxWidth: '70%', maxHeight: '50vh', aspectRatio: 1.618 }}
 			responsive
 			data={data}
 			margin={{
@@ -68,7 +68,8 @@ const LineBarAreaComposedChart = () => {
 			<CartesianGrid stroke='#f5f5f5' />
 			<XAxis
 				dataKey='nombre'
-				scale='band'
+				scale='auto'
+				
 			/>
 			<YAxis  />
 			<Tooltip />

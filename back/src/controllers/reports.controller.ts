@@ -97,7 +97,7 @@ export const DownloadCertificate = async (req: Request, res: Response) => {
 
   doc.moveDown(2);
 
-  doc.fontSize(14).fillColor('#000000').text('Este certificado es permiado a', { align: 'center' });
+  doc.fontSize(14).fillColor('#000000').text('Este certificado es premiado a', { align: 'center' });
 
   doc.moveDown(0.5);
 

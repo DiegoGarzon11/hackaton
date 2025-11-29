@@ -26,6 +26,3 @@ textarea:focus {
 	border-bottom: 10px solid transparent;
 	border-left: 12px solid #00c951;
 }
-#padre{
-  transition: all 0.5s ease-in-out;
-}
