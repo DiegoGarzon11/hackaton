@@ -48,19 +48,24 @@ function Chat() {
 						<p className='w-fit max-w-3/5 wrap-break-word whitespace-normal b-3 py-2 px-4 rounded-3xl ml-2 bg-blue-500 self-start'>{response?.response}</p>
 						<p className='w-fit max-w-3/5 wrap-break-word whitespace-normal b-3 py-2 px-4 rounded-3xl mr-2 bg-blue-200 self-end'>{response?.question || buttonText}</p>
 						<p className='w-fit max-w-3/5 wrap-break-word whitespace-normal b-3 py-2 px-4 rounded-3xl mr-2 bg-blue-200 self-end'>{response?.question || buttonText}</p>
+						<p className='w-fit max-w-3/5 wrap-break-word whitespace-normal b-3 py-2 px-4 rounded-3xl mr-2 bg-blue-200 self-end'>{response?.question || buttonText}fadsadgsdgsdfhoooooooooooooooooooooooooooooooooooooooo</p>
+						<p className='w-fit max-w-3/5 wrap-break-word whitespace-normal b-3 py-2 px-4 rounded-3xl mr-2 bg-blue-200 self-end'>{response?.question || buttonText}fadsadgsdgsdfhoooooooooooooooooooooooooooooooooooooooo</p>
+						<p className='w-fit max-w-3/5 wrap-break-word whitespace-normal b-3 py-2 px-4 rounded-3xl mr-2 bg-blue-200 self-end'>{response?.question || buttonText}fadsadgsdgsdfhoooooooooooooooooooooooooooooooooooooooo</p>
+						<p className='w-fit max-w-3/5 wrap-break-word whitespace-normal b-3 py-2 px-4 rounded-3xl mr-2 bg-blue-200 self-end'>{response?.question || buttonText}fadsadgsdgsdfhoooooooooooooooooooooooooooooooooooooooo</p>
+						<p className='w-fit max-w-3/5 wrap-break-word whitespace-normal b-3 py-2 px-4 rounded-3xl mr-2 bg-blue-200 self-end'>{response?.question || buttonText}fadsadgsdgsdfhoooooooooooooooooooooooooooooooooooooooo</p>
+						<p className='w-fit max-w-3/5 wrap-break-word whitespace-normal b-3 py-2 px-4 rounded-3xl mr-2 bg-blue-200 self-end'>{response?.question || buttonText}fadsadgsdgsdfhoooooooooooooooooooooooooooooooooooooooo</p>
 					</div>
-					<div className='flex self-end justify-self-end'>
-
-						{!button ?
-							<button onClick={handleClick} className={`border mr-2 mb-2 p-2 rounded-2xl text-violet-800`}>Reportes</button>
-							:
-							<div className='flex mr-2 mb-2 gap-2'>
-								<button onClick={handleClick} className='border p-2 rounded-2xl text-violet-800'>Certificados</button>
-								<button onClick={handleClick} className='border p-2 rounded-2xl text-violet-800'>Entregas pendientes</button>
-								<button onClick={handleClick} className='border p-2 rounded-2xl text-violet-800'>Fallas</button>
-							</div>
-						}
-					</div>
+				</div>
+				<div className='flex justify-end items-center bg-linear-to-tr from-white to-violet-100 w-full '>
+					{!button ?
+						<button onClick={handleClick} className={`border mr-2 mb-2 p-2 rounded-2xl text-violet-800`}>Reportes</button>
+						:
+						<div className='flex mr-2 mb-2 gap-2'>
+							<button onClick={handleClick} className='border p-2 rounded-2xl text-violet-800'>Certificados</button>
+							<button onClick={handleClick} className='border p-2 rounded-2xl text-violet-800'>Entregas pendientes</button>
+							<button onClick={handleClick} className='border p-2 rounded-2xl text-violet-800'>Fallas</button>
+						</div>
+					}
 				</div>
 				<div className='flex items-center m-2 bg-white rounded-4xl px-3 gap-4'>
 					<textarea placeholder='Escribe lo que quieras' maxLength={200} onChange={handleMessage} className='h-11 self-center  w-full resize-none content-center  ' />
