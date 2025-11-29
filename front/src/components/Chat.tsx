@@ -23,6 +23,8 @@ function Chat() {
 	const [id, setId] = useState('');
 	const [showTextRoute, setShowTextRoute] = useState(false);
 	const [showChat, setShowChat] = useState(false);
+	const [valueRoute, setValueRoute] = useState('');
+	const [valueBeneficiaries, setValueBeneficiaries] = useState('');
 	const scrollToBottom = () => {
 		messagesEndRef.current?.scrollIntoView({ behavior: 'auto' });
 	};
@@ -76,6 +78,8 @@ function Chat() {
 		setIsBeneficiaries(false);
 		setIsRoute(false);
 		setShowTextRoute(false);
+		setBeneficiaries('');
+
 		const response = await fetch('http://localhost:4000/api/colegios');
 		const data = await response.json();
 		setIsColegio(true);
@@ -96,6 +100,7 @@ function Chat() {
 		setIsRoute(true);
 		setRoutes(data.resultados);
 		setUbication('');
+		setValueRoute(ubicacion);
 	};
 	const getBeneficiaries = async (id: string) => {
 		setManualResponse([]);
@@ -107,6 +112,7 @@ function Chat() {
 		setBeneficiaries(data.response);
 		setUbication('');
 		setIsBeneficiaries(true);
+		setValueBeneficiaries(id);
 	};
 	return (
 		<section>
@@ -257,25 +263,47 @@ function Chat() {
 						<div ref={messagesEndRef} />
 					</div>
 					{option && isRoute && routes.length > 0 ? (
-						<>
-							<div className='bg-white rounded-md mx-2 text-start p-3 h-60 overflow-auto'>
-								{routes.map((a, i) => (
-									<div key={i}>
-										<p>
-											La ruta numero <b>{a.id}</b> del colegio <b>{a.colegio}</b> hace los siguientes recorridos: <b>{a.recorrido}</b>
-										</p>
-										<br />
-									</div>
-								))}
+						<div>
+							<div className='flex w-10/12'>
+								<UserStar className='size-30 -top-10 relative text-white' />
+								<div className='bg-white rounded-md mx-2 text-start p-3 h-60 overflow-auto'>
+									{routes.map((a, i) => (
+										<div key={i}>
+											<p>
+												La ruta numero <b>{a.id}</b> del colegio <b>{a.colegio}</b> hace los siguientes recorridos: <b>{a.recorrido}</b>
+											</p>
+											<br />
+										</div>
+									))}
+								</div>
 							</div>
-						</>
+							<div className='flex justify-end w-full'>
+								<p className='mr-1.5 bg-green-500 text-start self-end max-w-2/3 wrap-break-word whitespace-normal b-3 py-1 px-3 text-white rounded-md my-5  min-w-32 '>
+									{valueRoute}
+								</p>
+								<span
+									id='indicator'
+									className='mt-5 relative  bottom-0 right-2.5  h-2  '></span>
+							</div>
+						</div>
 					) : (
 						''
 					)}
 					{option && beneficiaries != '' ? (
 						<>
-							<div className='bg-white rounded-md mx-2 text-start p-3 h-40 overflow-auto'>
-								<p>{beneficiaries}</p>
+							<div className='flex  gap-3'>
+								<UserStar className='size-16 -top-5 relative text-white' />
+								<div className='bg-white rounded-md mr-2 text-start p-3 h-auto overflow-auto'>
+									<p>{beneficiaries}</p>
+								</div>
+							</div>
+							<div className='flex justify-end w-full'>
+								<p className='mr-1.5 bg-green-500 text-start self-end max-w-2/3 wrap-break-word whitespace-normal b-3 py-1 px-3 text-white rounded-md my-5  min-w-32 '>
+								Ruta numero	{valueBeneficiaries}
+								</p>
+								<span
+									id='indicator'
+									className='mt-5 relative  bottom-0 right-2.5  h-2  '></span>
 							</div>
 						</>
 					) : (
@@ -318,15 +346,17 @@ function Chat() {
 					)}
 
 					{option && isColegio && manualResponse.length > 0 ? (
-						<>
+						<div className='flex'>
+							<UserStar className='size-8 top-0 relative text-white' />
 							<div className='bg-white rounded-md mx-2 text-start p-3 h-60 overflow-auto'>
+								<p className='font-semibold'>Los colegios que cumplen con la ubicación son:</p>
 								<ul>
 									{manualResponse.map((a, i) => (
 										<li key={i}>• {a}</li>
 									))}
 								</ul>
 							</div>
-						</>
+						</div>
 					) : (
 						''
 					)}
