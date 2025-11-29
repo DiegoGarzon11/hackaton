@@ -39,7 +39,7 @@ function App() {
 			<div className='w-full '>
 				<div className='flex flex-col justify-center h-2/3'>
 					<div className='w-full'>
-						<header className="bg-[url('/fondo.jpg')] bg-cover py-5 mb-3 rounded-md">
+						<header className="bg-[url('/fondo.png')] bg-no-repeat py-5 mb-3 rounded-md">
 							<div className='flex w-full justify-evenly'>
 								{data?.map((d, i) => (
 									<div
@@ -49,20 +49,24 @@ function App() {
 										}`}>
 										<p className={`text-start font-semibold ${i == 0 ? 'text-white' : 'text-blue-900'}`}> Estudiantes {d?.nombre}</p>
 										<p className='text-4xl text-start font-semibold '>{d?.estudiantes}</p>
-										<p className='flex items-center gap-2'>
-											<ChartSpline /> 33% alo año pasado
+										<p className={` ${i == 1 ? 'text-red-500' : 'text-green-500'} flex items-center gap-2 font-semibold`}>
+											<ChartSpline className={i == 1 ? 'text-red-500' : 'text-green-500'} /> {i == 1 ? '6% al año pasado' : '12% al año pasado'}
 										</p>
 									</div>
 								))}
-								<div className='rounded-md p-3 w-60 bg-white'>
+								<div className='rounded-md p-3 w-60 bg-white flex flex-col gap-3'>
 									<p className='text-start text-blue-900 font-semibold'> Consultas Frecuentes</p>
 									<p className='text-4xl text-start font-semibold '>{consultasGenral}</p>
-									<ChartSpline />
+									<p className='flex items-center gap-2 text-green-500 font-semibold'>
+										<ChartSpline /> 65% al  año pasado
+									</p>
 								</div>
-								<div className='rounded-md p-3 w-60 bg-white'>
+								<div className='rounded-md p-3 w-60 bg-white flex flex-col gap-3'>
 									<p className='text-start text-blue-900 font-semibold'> Consultas Totales</p>
 									<p className='text-4xl text-start font-semibold'>{consultas}</p>
-									<ChartSpline />
+									<p className='flex items-center gap-2 text-green-500 font-semibold'>
+										<ChartSpline /> 80% al  año pasado
+									</p>
 								</div>
 							</div>
 						</header>
