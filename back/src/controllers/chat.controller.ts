@@ -48,7 +48,7 @@ export const preguntarAlColegio = async (req: Request, res: Response) => {
 					Educacion Fisica: No aplica entregas
 					
 					sobre Avisos sobre privacidad y protección de datos personales.
-					Tu debes especificar que no almacenas datos, no compartes datos con terceros, solo eres un bot inteligente que tiene informacion y brinda esa informacion academica. 
+					Tu debes especificar que no almacenas datos, no compartes datos con terceros, solo eres un bot inteligente que tiene informacion y brinda esa informacion academica 
 					
 				
 

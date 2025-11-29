@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../App.css';
 import { ArrowLeft, Minimize, SendHorizontal, UserStar } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface Route {
 	id: number;
@@ -32,7 +31,7 @@ function Chat() {
 	const handleMessage = (message: React.ChangeEvent<HTMLTextAreaElement>) => {
 		setMessage(message.target.value);
 	};
-
+	
 	const sendMessage = async () => {
 		const API = await fetch('http://localhost:4000/api/chat', {
 			headers: {
@@ -48,6 +47,9 @@ function Chat() {
 	useEffect(() => {
 		scrollToBottom();
 	}, [almacen]);
+	useEffect(() => {
+		setCloseChat(true);
+	}, []);
 	const downloadReport = async () => {
 		const response = await fetch('http://localhost:4000/api/reports/downloadReport');
 		const blob = await response.blob();
@@ -121,8 +123,8 @@ function Chat() {
 			<div className='h-full   '>
 				<div
 					id='padre'
-					className={` bg-linear-to-r from-blue-900/80 to-violet-500/70 w-sm ${
-						closeChat ? 'h-10 overflow-hidden' : 'h-1/5 max-h-'
+					className={`  bg-linear-to-r from-blue-900/80 to-violet-500/70 w-sm ${
+						closeChat ? 'h-10 overflow-hidden' : 'h-1/5 '
 					} pb-2 mb-3 rounded-md  `}>
 					<div className='flex justify-between items-center '>
 						<button
@@ -135,7 +137,7 @@ function Chat() {
 						</button>
 						<button
 							onClick={() => setCloseChat((prev) => !prev)}
-							className='text-white font-semibold  w-auto my-2 cursor-pointer mr-2    '>
+							className='text-white font-semibold  w-auto my-2 cursor-pointer mr-2 '>
 							<Minimize className='text-white  ' />
 						</button>
 					</div>
@@ -220,7 +222,7 @@ function Chat() {
 															setIsBeneficiaries(false);
 														}}
 														className='border border-blue-500 rounded-md bg-white w-3/4 cursor-pointer text-start pl-3 '>
-														Rutas
+														Rutas / Trayectos
 													</button>
 													<button
 														onClick={() => {

@@ -32,12 +32,12 @@ const LineBarAreaComposedChart = () => {
 			<Legend />
 			<Area
 				type='monotone'
-				dataKey='conteo'
+				dataKey='total'
 				fill='#8884d8'
 				stroke='#8884d8'
 			/>
 			<Bar
-				dataKey='conteo'
+				dataKey='total'
 				barSize={30}
 				fill='#413ea0'
 			/>

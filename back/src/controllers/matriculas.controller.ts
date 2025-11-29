@@ -10,7 +10,7 @@ export const getMatriculas = (req: Request, res: Response) => {
 
 	matriculas.forEach((item: any) => {
 		const institucion = item.institucion;
-		const genero = item.genero.toUpperCase().startsWith('F') ? 'F' : 'M'; 
+		const genero = item.genero.toUpperCase().startsWith('F') ? 'F' : 'M';
 
 		if (!conteoPorInstitucion[institucion]) {
 			conteoPorInstitucion[institucion] = { F: 0, M: 0 };
@@ -23,22 +23,30 @@ export const getMatriculas = (req: Request, res: Response) => {
 		const nombre = cur.institucion;
 
 		acc[nombre] = (acc[nombre] || 0) + 1;
-		
 
 		return acc;
 	}, {});
 
 	const resultado = Object.keys(conteos).map((nombre) => ({
 		nombre: nombre.slice(22),
-		conteo: conteos[nombre],
+		total: conteos[nombre],
 		masculino: conteoPorInstitucion[nombre].M,
 		femenino: conteoPorInstitucion[nombre].F,
 	}));
-	const totalEstudiantes = {
-		conteo: Object.values(conteos).reduce((acc: number, cur: any) => acc + cur, 0),
-		masculino: Object.values(conteoPorInstitucion).reduce((acc: any, cur: any) => acc + cur.M, 0),
-		femenino: Object.values(conteoPorInstitucion).reduce((acc: any, cur: any) => acc + cur.F, 0),
-	}
+	const totalEstudiantes = [
+		{
+			nombre: 'Total',
+			estudiantes: Object.values(conteos).reduce((acc: number, cur: any) => acc + cur, 0),
+		},
+		{
+			nombre: 'Masculino',
+			estudiantes: Object.values(conteoPorInstitucion).reduce((acc: any, cur: any) => acc + cur.M, 0),
+		},
+		{
+			nombre: 'Femenino',
+			estudiantes: Object.values(conteoPorInstitucion).reduce((acc: any, cur: any) => acc + cur.F, 0),
+		},
+	];
 
-	return res.json({resultado, totalEstudiantes});
+	return res.json({ resultado, totalEstudiantes });
 };

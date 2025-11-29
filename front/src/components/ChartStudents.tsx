@@ -4,7 +4,7 @@ import { Legend, Pie, PieChart, Tooltip } from 'recharts';
 // #region Sample data
 
 // #endregion
-export default function PieChartWithPaddingAngle({ isAnimationActive = true, titulo }: { isAnimationActive?: boolean; titulo: string }) {
+export default function PieChartWithPaddingAngle({ isAnimationActive = true, titulo, color }: { isAnimationActive?: boolean; titulo: string, color:string }) {
 	const [data, setData] = useState([]);
 	useEffect(() => {
 		fetch('http://localhost:4000/api/matriculas/getMatriculas')
@@ -33,7 +33,7 @@ export default function PieChartWithPaddingAngle({ isAnimationActive = true, tit
 	return (
 		<>
 			<PieChart
-				style={{ width: '80%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 }}
+				style={{ width: '80%', maxWidth: '500px', aspectRatio: 1 }}
 				responsive>
 				<Pie
 					data={data}
@@ -41,7 +41,7 @@ export default function PieChartWithPaddingAngle({ isAnimationActive = true, tit
 					outerRadius='100%'
 					// Corner radius is the rounded edge of each pie slice
 					cornerRadius='50%'
-					fill='#0088FE'
+					fill={color}
 					// padding angle is the gap between each pie slice
 					paddingAngle={5}
 					dataKey={titulo}

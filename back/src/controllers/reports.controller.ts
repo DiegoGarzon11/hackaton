@@ -4,8 +4,9 @@ import type { Request, Response } from 'express';
 import { createWriteStream, readFileSync } from 'node:fs';
 import path from 'node:path';
 const estudiantesPath = path.join(process.cwd(), 'src/database/estudiantes.json');
-
+const infoJson = path.join(process.cwd(), 'src/database/TemasHora.json');
 export const DownloadReports = async (req: Request, res: Response) => {
+	
 	const workbook = new ExcelJS.Workbook();
 	const estudiantes = JSON.parse(readFileSync(estudiantesPath, 'utf8'));
 	const sheet = workbook.addWorksheet('Reporte');
@@ -124,3 +125,8 @@ export const DownloadCertificate = async (req: Request, res: Response) => {
 	doc.end();
 };
 
+export const SendInfo = async (req: Request, res: Response) => {
+	
+	const info = JSON.parse(readFileSync(infoJson, 'utf8'));
+	return res.json(info);
+};

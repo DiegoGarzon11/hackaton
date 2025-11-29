@@ -1,0 +1,44 @@
+{
+	"usoApp": {
+		"horasPico": [
+			{
+				"hora": "07:00-09:00",
+				"usuarios": 320
+			},
+			{
+				"hora": "12:00-14:00",
+				"usuarios":190
+			},
+			{
+				"hora": "18:00-21:00",
+				"usuarios": 400
+			},
+			{
+				"hora": "18:00-21:00",
+				"usuarios": 240
+			}
+		]
+	},
+	"temasMasConsultados": [
+		{
+			"tema": "horarios",
+			"consultas": 650
+		},
+		{
+			"tema": "fechas",
+			"consultas": 980
+		},
+		{
+			"tema": "asignaturas",
+			"consultas": 760
+		},
+		{
+			"tema": "actividades",
+			"consultas": 572
+		},
+		{
+			"tema": "reuniones",
+			"consultas": 712
+		}
+	]
+}
