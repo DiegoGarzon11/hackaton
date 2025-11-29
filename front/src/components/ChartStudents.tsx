@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Legend, Pie, PieChart, Tooltip } from 'recharts';
+import { Pie, PieChart, Tooltip } from 'recharts';
 
 // #region Sample data
 
@@ -10,7 +10,6 @@ export default function PieChartWithPaddingAngle({ isAnimationActive = true, tit
 		fetch('http://localhost:4000/api/matriculas/getMatriculas')
 			.then((res) => res.json())
 			.then((data) => setData(data?.resultado));
-		console.log(data);
 	}, []);
 
 	const CustomTooltip = ({ active, payload }: { active: any; payload: any }) => {

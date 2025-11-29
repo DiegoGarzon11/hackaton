@@ -3,20 +3,40 @@ import LineBarAreaComposedChart from './components/ChartSchool';
 import PieChartWithPaddingAngle from './components/ChartStudents';
 import Chat from './components/Chat';
 import { SimpleBarChartHoras, SimpleBarChart } from './components/CompareChart';
-
+import { socket } from './socket';
 function App() {
 	const [data, setData] = useState([]);
+	const [consultas, setConsultas] = useState(0);
+	const [consultasGenral, setConsultasGeneral] = useState([]);
 	useEffect(() => {
 		fetch('http://localhost:4000/api/matriculas/getMatriculas')
 			.then((res) => res.json())
-			.then((data) => setData(data?.totalEstudiantes));
+			.then((data) => {
+				setData(data?.totalEstudiantes);
+			});
 	}, []);
-	
+	useEffect(() => {
+		fetch('http://localhost:4000/api/reports/sendInfo')
+			.then((res) => res.json())
+			.then((data) => {
+				const res = data?.horasPico?.reduce((acc, curr) => acc + curr.usuarios, 0);
+				const resGe = data?.temasMasConsultados?.reduce((acc, curr) => acc + curr.consultas, 0);
+				setConsultas(res);
+				setConsultasGeneral(resGe);
+			});
+	}, []);
+	useEffect(() => {
+		socket.on('statsUpdated', (data) => {
+			const { horasPico, temasMasConsultados } = data;
+			setConsultas(horasPico?.reduce((acc, curr) => acc + curr.usuarios, 0));
+			setConsultasGeneral(temasMasConsultados?.reduce((acc, curr) => acc + curr.consultas, 0));
+		});
+	}, []);
 
 	return (
 		<div className='flex items-center'>
 			<div className=' w-1/6 col-span-1 h-full'>
-				<Chat  />
+				<Chat />
 			</div>
 			<div className='w-full '>
 				<div className='flex flex-col justify-center h-2/3'>
@@ -24,12 +44,20 @@ function App() {
 						<header className="bg-[url('/fondo.jpg')] bg-cover py-5 mb-3 rounded-md">
 							<p className='text-center w-full text-2xl font-bold mb-5'>Matriculas en las insituciones educativas año 2022</p>
 							<div className='flex w-full justify-evenly'>
-								{data?.map((d: any) => (
+								{data?.map((d) => (
 									<div className='rounded-md p-6 w-60 bg-white'>
 										<p className='text-4xl'>{d?.estudiantes}</p>
 										<p> Estudiantes {d?.nombre}</p>
 									</div>
 								))}
+								<div className='rounded-md p-6 w-60 bg-white'>
+									<p className='text-4xl'>{consultasGenral}</p>
+									<p> Consultas Frecuentes</p>
+								</div>
+								<div className='rounded-md p-6 w-60 bg-white'>
+									<p className='text-4xl'>{consultas}</p>
+									<p> Consultas Totales</p>
+								</div>
 							</div>
 						</header>
 						<div className='flex gap-3'>
@@ -38,7 +66,7 @@ function App() {
 							</div>
 							<div className='bg-white flex justify-center items-center  w-1/3'>
 								<img
-								className='w-full h-full aspect-square object-cover '
+									className='w-full h-full aspect-square object-cover '
 									style={{
 										filter: 'drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5))',
 									}}
@@ -82,7 +110,6 @@ function App() {
 					</div>
 				</div>
 			</div>
-			
 		</div>
 	);
 }
